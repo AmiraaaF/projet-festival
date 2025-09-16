@@ -1,0 +1,7 @@
+  
+
+<p>name: {{ festival()?.name }}</p> 
+<!-- festival() → gets the current value of the signal. -->
+<p>location: {{ festival()?.location }}</p> 
+<!-- //?. → safe navigation in case festival is not yet set. -->
+<p>year: {{ festival()?.year }}</p>

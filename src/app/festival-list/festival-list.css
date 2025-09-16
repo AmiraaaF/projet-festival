@@ -1,0 +1,17 @@
+.card-container {
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+}
+.festival-card {
+  flex: 1 1 calc(33.333% - 16px);
+  border: 2px solid hwb(314 5% 21% / 0.737);
+  border-radius: 12px;
+  padding: 16px;
+  background: #d152ba;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+h1 {
+    color: hwb(314 5% 21% / 0.737);
+    text-align: center;
+}
