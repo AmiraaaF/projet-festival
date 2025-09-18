@@ -5,3 +5,6 @@
 <p>location: {{ festival()?.location }}</p> 
 <!-- //?. → safe navigation in case festival is not yet set. -->
 <p>year: {{ festival()?.year }}</p>
+
+<button (click)="onRemoveClick()">Supprimer</button>
+

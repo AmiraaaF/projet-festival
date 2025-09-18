@@ -12,5 +12,10 @@ import { CommonModule } from '@angular/common';
 })
 export class FestivalCard {
   public festival = input<FestivalDto>();
+  public remove = output<void>();                   // l’enfant émet un évènement 
+
+  onRemoveClick() {
+    this.remove.emit();
+  }
   
 }

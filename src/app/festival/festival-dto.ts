@@ -3,4 +3,5 @@ export interface FestivalDto {
     location: string
     year: number
     
+    
 }
