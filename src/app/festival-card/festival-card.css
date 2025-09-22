@@ -1,0 +1,17 @@
+.highlight {
+  border: 3px solid #ff9800;
+  border-radius: 12px;
+  padding: 12px;
+  background: #fffbe7;
+  position: relative;
+}
+
+.bandeau {
+  background: #ff9800;
+  color: white;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  text-align: center;
+}

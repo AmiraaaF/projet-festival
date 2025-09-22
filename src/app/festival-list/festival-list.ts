@@ -9,20 +9,16 @@ import { FestivalDto } from '../festival/festival-dto';
   styleUrl: './festival-list.css'
 })
 export class FestivalList {
-  festival1: FestivalDto = { name: 'Festival A', location: 'Location A', year: 2023 };
-  festival2: FestivalDto = { name: 'Festival B', location: 'Location B', year: 2024 };
-  festival3: FestivalDto = { name: 'Festival C', location: 'Location C', year: 2025 };
-  hide1 = false;
-  hide2 = false;
-  hide3 = false;
-
-  onDelete1() {
-    this.hide1 = true;
+  festivals: FestivalDto[] = [
+    { name: 'Festival A', location: 'Location A', year: 2023 , state: 'upcoming'},
+    { name: 'Festival B', location: 'Location B', year: 2024, state: 'ongoing' },
+    { name: 'Festival C', location: 'Location C', year: 2025, state: 'past' }
+  ];
+  onDelete(index: number) {
+    this.festivals.splice(index, 1);
   }
-  onDelete2() {
-    this.hide2 = true;
-  }
-  onDelete3() {
-    this.hide3 = true;
+  // ajout d'un compteur de festials 
+  get festivalCount(): number {
+    return this.festivals.length;
   }
 }

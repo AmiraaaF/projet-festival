@@ -1,10 +1,11 @@
 <h1>Festival List</h1>
 <div class="card-container">
-  <app-festival-card class="festival-card" [festival]="festival1" (remove)="onDelete1()"
-    [hidden]="hide1"></app-festival-card>
-  <app-festival-card class="festival-card" [festival]="festival2" (remove)="onDelete2()"
-    [hidden]="hide2"></app-festival-card>
-  <app-festival-card class="festival-card" [festival]="festival3" (remove)="onDelete3()"
-    [hidden]="hide3"></app-festival-card>
-
+  @for (fest of festivals; track fest) {
+    <app-festival-card
+      class="festival-card"
+      [festival]="fest"
+      (remove)="onDelete($index)">
+    </app-festival-card>
+  }
 </div>
+<p>Total Festivals: {{ festivalCount }}</p>

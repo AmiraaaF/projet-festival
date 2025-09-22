@@ -1,10 +1,21 @@
-  
-
-<p>name: {{ festival()?.name }}</p> 
-<!-- festival() → gets the current value of the signal. -->
-<p>location: {{ festival()?.location }}</p> 
-<!-- //?. → safe navigation in case festival is not yet set. -->
-<p>year: {{ festival()?.year }}</p>
-
-<button (click)="onRemoveClick()">Supprimer</button>
+<div>
+  <p>Name: {{ festival()?.name }}</p>
+  <p>Location: {{ festival()?.location }}</p>
+  <p>Year: {{ festival()?.year }}</p>
+  @if (festival()?.state === 'upcoming') {
+    <p>Status: Upcoming</p>
+  } @else if (festival()?.state === 'ongoing') {
+  <div class="highlight">
+    <div class="bandeau">
+      Événement principal : {{ festival()?.name }} {{ festival()?.year }}
+    </div>
+    <p>Status: Ongoing</p>
+  </div>
+  } @else if (festival()?.state === 'past') {
+    <p>Status: Past</p>
+  } @else {
+    <p>Status: Unknown</p>
+  }
+  <button (click)="onRemoveClick()">Supprimer</button>
+</div>
 
